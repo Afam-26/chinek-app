@@ -1,3 +1,8 @@
+/* Enable smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Basic Styles */
 body {
   font-family: Arial, sans-serif;
@@ -9,7 +14,7 @@ body {
 header {
   background-color: #333;
   color: white;
-  padding: 2rem;
+  padding: 1.5rem 0;
   text-align: center;
 }
 
@@ -18,14 +23,62 @@ header h1 {
   margin-bottom: 0.5rem;
 }
 
-header p {
-  font-size: 1.2rem;
+/* Navigation Styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
-/* Featured Products */
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Home Section */
+.home {
+  background-color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.home h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* About Section */
+.about {
+  background-color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Featured Products Section */
 .featured {
   background-color: white;
-  padding: 2rem;
+  padding: 4rem 0;
 }
 
 .featured h2 {
@@ -34,32 +87,46 @@ header p {
   margin-bottom: 2rem;
 }
 
-.catalog {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  justify-items: center;
+/* Section Styling */
+section {
+  padding: 4rem 0;
 }
 
-.product-card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;  
 }
 
-.product-card img {
-  width: 100%;
-  height: auto;
+p {
+  font-size: 1.2rem;
+  color: #555;  
 }
 
-.product-card h3 {
-  font-size: 1.5rem;
-  margin: 1rem 0;
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.product-card button {
+/* Contact Form Styling */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact form label {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.contact form input, .contact form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 500px;
+}
+
+.contact form button {
   padding: 10px 20px;
   background-color: #333;
   color: white;
@@ -67,29 +134,11 @@ header p {
   cursor: pointer;
 }
 
-.product-card button:hover {
+.contact form button:hover {
   background-color: #555;
 }
 
-/* Customer Reviews */
-.reviews {
-  background-color: #fff;
-  padding: 2rem;
-  text-align: center;
-}
-
-.reviews h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.review {
-  margin-bottom: 1.5rem;
-  font-style: italic;
-  font-size: 1.1rem;
-}
-
-/* Footer */
+/* Footer Section */
 footer {
   background-color: #333;
   color: white;
@@ -101,24 +150,15 @@ footer p {
   margin: 0;
 }
 
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .catalog {
     grid-template-columns: 1fr 1fr;
-  }
+  }  
 }
 
 @media (max-width: 480px) {
   .catalog {
     grid-template-columns: 1fr;
-  }
+  }  
 }

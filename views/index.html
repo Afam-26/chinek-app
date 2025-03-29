@@ -5,18 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tyre Shop</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-  <!-- Header Section -->
+  <!-- Header Section with Navigation -->
   <header>
     <div class="container">
       <h1>Welcome to Tyre Shop</h1>
-      <p>Your one-stop shop for the best tyres!</p>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li> <!-- Link to the Contact section -->
+        </ul>
+      </nav>
     </div>
   </header>
 
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="container">
+      <h2>Your one-stop shop for the best tyres!</h2>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We offer a wide range of tyres suitable for various vehicles. Our tyres are durable, reliable, and affordable.</p>
+    </div>
+  </section>
+
   <!-- Featured Products Section -->
-  <section class="featured">
+  <section id="products" class="featured">
     <div class="container">
       <h2>Featured Products</h2>
       <div class="catalog">
@@ -33,21 +56,27 @@
           <p>High performance tyre for sports cars.</p>
           <p><strong>$60</strong></p>
           <button onclick="window.location.href='/catalog'">See More</button>
-        </div>        
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Customer Reviews Section -->
-  <section class="reviews">
+  <!-- Contact Section (Moved from separate page) -->
+  <section id="contact" class="contact">
     <div class="container">
-      <h2>What Our Customers Say</h2>
-      <div class="review">
-        <p>"Amazing quality tyres! Excellent customer service." - John D.</p>
-      </div>
-      <div class="review">
-        <p>"Great prices and fast delivery. Will definitely buy again!" - Sarah L.</p>
-      </div>
+      <h2>Contact Us</h2>
+      <form action="/contact" method="POST" id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   </section>
 
@@ -55,7 +84,6 @@
   <footer>
     <div class="container">
       <p>&copy; 2025 Tyre Shop. All rights reserved.</p>
-      <p><a href="/contact">Contact Us</a></p>
     </div>
   </footer>
 

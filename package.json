@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Afam-26/chinek-app#readme",
   "dependencies": {
     "express": "^4.21.2",
+    "path": "^0.12.7",
     "routes": "^2.1.0"
   }
 }

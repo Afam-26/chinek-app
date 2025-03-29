@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');  // Import the path module
 const router = express.Router();
 
 // Static data for products (you can replace this with a database later)
@@ -29,11 +30,6 @@ router.get('/', (req, res) => {
 router.get('/catalog', (req, res) => {
   res.json(products);  // Send product list as JSON
 });
-
-// Contact route - Serve the catalog page
-app.get('/catalog', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'views', 'catalog.html'));
-  });
 
 // Contact route - Serve the contact form
 router.get('/contact', (req, res) => {
