@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tyre Shop</title>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" />
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/index.css">
+  <script src="https://kit.fontawesome.com/2b9d44342e.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Header Section with Navigation -->
@@ -17,7 +19,7 @@
           <li><a href="/">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#products">Products</a></li>
-          <li><a href="#contact">Contact</a></li> <!-- Link to the Contact section -->
+          <li><a href="#contact">Contact</a></li> 
         </ul>
       </nav>
     </div>
@@ -61,24 +63,32 @@
     </div>
   </section>
 
-  <!-- Contact Section (Moved from separate page) -->
-  <section id="contact" class="contact">
+<!--------contact---------->
+  <section id="contact">
     <div class="container">
-      <h2>Contact Us</h2>
-      <form action="/contact" method="POST" id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>afam262@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+1862 596-7814</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/AfamAnekeh" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>                        
+                    <a href="https://www.linkedin.com/in/afam/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/Afamefuna Anekeh.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet" action="https://formspree.io/f/mqaplqwp" method="POST">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+            </form>
+           <span id="msg"></span>
+            </div>
+        </div>
+    </section>
 
   <!-- Footer Section -->
   <footer>

@@ -24,14 +24,14 @@ app.get('/catalog', (req, res) => {
 });
 
 // Handle the contact form submission
-app.post('/contact', (req, res) => {
-  const { name, email, message } = req.body;
-  console.log(`Contact form submitted: ${name}, ${email}, ${message}`);
-  res.send('Thank you for your message!');
-});
+// app.post('/contact', (req, res) => {
+//   const { name, email, message } = req.body;
+//   console.log(`Contact form submitted: ${name}, ${email}, ${message}`);
+//   res.send('Thank you for your message!');
+// });
 
 // Start the server
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

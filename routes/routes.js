@@ -32,9 +32,9 @@ router.get('/catalog', (req, res) => {
 });
 
 // Contact route - Serve the contact form
-router.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'views', 'contact.html'));
-});
+// router.get('/contact', (req, res) => {
+//   res.sendFile(path.join(__dirname, '..', 'views', 'contact.html'));
+// });
 
 // POST route for handling contact form submission
 router.post('/contact', (req, res) => {
