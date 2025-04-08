@@ -7,14 +7,14 @@ const products = [
   {
     id: 1,
     name: 'Tyre A',
-    price: '50',
+    price: '70',
     description: 'Durable all-terrain tyre.',
     imageUrl: '/images/tyre-a.jpg',
   },
   {
     id: 2,
     name: 'Tyre B',
-    price: '60',
+    price: '100',
     description: 'High performance tyre for sports cars.',
     imageUrl: '/images/tyre-b.jpg',
   },
