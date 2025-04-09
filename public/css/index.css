@@ -1,138 +1,25 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4; 
-  }
-/* 
-  html, body {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-
-  section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    scroll-snap-align: start;
-  } */
-  
-  /* Header */
-  header {
-    background-color: #333;
-    color: white;
-    padding: 1.5rem 0;
-    text-align: center;
-    font-family:'Times New Roman', Times, serif
-  }
-
- 
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;   
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
-
   /*----------services---------------*/
 
 #services{
   padding: 30px 0;  
-  /* background-color: #ababab;  */
 }
 
-.services-list{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 50px;
-}
-
-.services-list div {
-  background: #262626;
+.services-list div {  
+  background-image: url("/images/shop1.png");
   padding: 40px;
   font-size: 13px;
   font-weight: 300;
-  border-radius: 10px;
-  transform: background 0.5s, transform 0.5s;
+  border-radius: 20px;
+  /* transform: background 0.5s, transform 0.5s; */
+  height: 50vh;  
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.services-list div i{
-  font-size: 50px;
-  margin-bottom: 30px;
-}
-
-.services-list div h2{
-  font-size: 30px;
-  font-weight: 500;
-  margin-bottom: 15px;
-  color: #f4f4f4;
-}
-
-.services-list div a{
-  text-decoration: none;
-  color: #fff;
-  font-size: 12px;
-  margin-top: 20px;
-  display: inline-block;
-}
-
-.services-list p {
-  color: #f4f4f4;
-}
-
-.services-list div:hover{
-  background: #ff004f;
-  background: #ababab;
-  transform: translateY(-10px);
-}
-
-.services-list.sub-title{
-  margin-top: 50px;
-}
-
-.services-left{
-  flex-basis: 35%;
-  margin-top: 30px;
-}
-.services-right{
-  flex-basis: 60%;
-  margin-top: 30px;
-}
-
-  
-/* About */
-
-.about-left{
-  flex-basis: 35%;
-}
-.about-right{
-  flex-basis: 60%;
-}
-
-
-
-  /* Featured Products Section */
+ /* Featured Products Section */
   .featured {  
-    padding: 4rem 0;
+    padding: 4rem 0; 
+    background-color: white;   
   }
   
   .featured h2 {
@@ -160,12 +47,68 @@ body {
     text-align: center;
     max-width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-image: url("/images/shop2.png");
+    height: 30vh;
+    flex-shrink: 0;
   }
   
   .featured .product-card img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+  }
+
+
+  .scroll-container-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome */
+  }
+
+  .scroll-btn {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+  }
+  
+  .scroll-btn.left {
+    left: 0;
+  }
+  
+  .scroll-btn.right {
+    right: 0;
+  }
+
+  .scroll-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  
+  .scroll-container:hover {
+    scroll-behavior: auto;
   }
   
 
@@ -175,6 +118,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .btn{
   display: block;
   margin: 50px auto;
@@ -197,6 +141,7 @@ body {
 
 .contact-left p{
   margin-top: 30px;
+  font-family:'Times New Roman', Times, serif
 }
 
 .contact-left p i {
@@ -236,7 +181,6 @@ form input, form textarea{
   width: 100%;
   border: 0;
   outline: none;
-  /* background: #262626; */
   background: white;
   padding: 15px;
   margin: 15px;
