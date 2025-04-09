@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const scrollLeftBtn = document.getElementById("scroll-left");
   const scrollRightBtn = document.getElementById("scroll-right");
 
-  const scrollSpeed = 1;
+  const scrollSpeed = 2;
   let autoScrollInterval;
 
   // Clone all product cards for infinite loop illusion
